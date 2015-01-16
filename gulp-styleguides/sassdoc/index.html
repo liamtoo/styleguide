@@ -1,0 +1,396 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+
+<title>SassDoc - v0.1.0</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width">
+<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Thanks to Sass-lang.com for the icons -->
+<link href="http://sass-lang.com/favicon.ico" rel="shortcut icon">
+
+</head>
+<body>
+
+  
+  <aside class="sidebar" role="nav">
+    
+  <div class="sidebar__header">
+  <h1 class="sidebar__title">
+    
+      <a href="https://github.com/Skoks/styleguide">SassDoc - v0.1.0</a>
+    
+  </h1>
+</div>
+
+<div class="sidebar__body">
+  
+  
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
+
+    
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="mixins"><a href="#mixins">mixins</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="mixins-mixin"><a href="#mixins-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="colored" data-type="mixin">
+              <a href="#mixin-colored">colored
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+  
+</div>
+
+
+  </aside>
+
+  
+  <article class="main" role="main">
+
+    
+    <header class="header" role="banner">
+  <div class="container">
+  
+    <div class="header__description">
+      <p>Styleguide tests</p>
+
+    </div>
+  
+
+    <div class="sassdoc__searchbar  searchbar">
+       <label for="js-search-input" class="visually-hidden">Search</label>
+       <div class="searchbar__form" id="js-search">
+         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+       </div>
+     </div>
+  </div>
+</header>
+
+
+    <div class="container">
+    
+
+  
+  
+
+    
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="mixins">mixins</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="mixins-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-colored">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-colored">colored</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin colored($color, $background) { 
+	@if type-of($color) == &#39;color&#39; and
+		type-of($background) == &#39;color&#39; {
+			color: $color;
+			background-color: $background;
+	} @else {
+
+		@error Mixin arguments has to be colors;
+
+	}
+ }"
+    data-collapsed="@mixin colored($color, $background) { ... }"><code>@mixin colored($color, $background) { ... }</code></pre>
+
+  
+    <a href="https://github.com/Skoks/styleguide/_mixins.scss#L20-L30" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Mixin for coloring things</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>color</p>
+</td>
+          <td data-label="type">
+          
+            Color
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$background</code></th>
+          <td data-label="desc"><p>background color</p>
+</td>
+          <td data-label="type">
+          
+            Color
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">colored(red, blue)
+// color: red
+// background-color: blue</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Throws</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Mixin arguments has to be colors</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">TODO's</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Do something else</p>
+</li>
+    
+  </ul>
+
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+
+  
+
+
+    </div>
+
+    
+    
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+        <div class="footer__project-info  project-info">
+          <!-- Name and URL -->
+          
+            <a class="project-info__name" href="https://github.com/Skoks/styleguide">SassDoc</a>
+          
+
+          <!-- Version -->
+          <span class="project-info__version"> - v0.1.0</span>
+
+          <!-- License -->
+          
+        </div>
+      
+
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
+      
+    </div>
+  </footer>
+
+
+  </article>
+
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/main.min.js"></script>
+
+</body>
+</html>

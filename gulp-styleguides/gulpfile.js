@@ -6,7 +6,7 @@ var gulp 			  = require('gulp'),
 	sassdoc			  = require('gulp-sassdoc');
 
 gulp.task('default', function() {
-	return gulp.src('main.scss')
+	return gulp.src('assets/main.scss')
     	.pipe(sass({
     		style: 'expanded',
     		precision: 1,
@@ -30,7 +30,7 @@ gulp.task('watch', function() {
 
 gulp.task('sassdoc', function () {
   return gulp
-    .src('tools')
+    .src('assets/tools')
     .pipe(sassdoc({
         'dest': 'sassdoc',
         'verbose': true,

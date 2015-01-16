@@ -1,0 +1,30 @@
+/// Mixin for coloring things
+///
+/// @author Vova Skok
+///
+/// @group mixins
+///
+/// @param {color} $color - color
+/// @param {color} $background - background color
+///
+/// @throw Mixin arguments has to be colors
+///
+/// @example
+/// colored(red, blue)
+/// // color: red
+/// // background-color: blue
+///
+/// @todo
+/// Do something else
+
+@mixin colored($color, $background) {
+	@if type-of($color) == 'color' and
+		type-of($background) == 'color' {
+			color: $color;
+			background-color: $background;
+	} @else {
+
+		@error Mixin arguments has to be colors;
+
+	}
+}
