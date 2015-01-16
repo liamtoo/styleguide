@@ -54,6 +54,6 @@ gulp.task('sassdoc', function () {
 **/
 
 gulp.task('hologram', function() {
-        gulp.src('config.yml')
-                .pipe(hologram());
+        gulp.src('./hologram/config.yml')
+          .pipe(hologram());
 });
