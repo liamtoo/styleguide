@@ -3,7 +3,8 @@
 var gulp 			  = require('gulp'),
 	sass 			    = require('gulp-ruby-sass'),
 	autoprefixer 	= require('gulp-autoprefixer'),
-	sassdoc			  = require('gulp-sassdoc');
+	sassdoc			  = require('gulp-sassdoc'),
+  hologram      = require('gulp-hologram');
 
 gulp.task('default', function() {
 	return gulp.src('assets/main.scss')
@@ -45,3 +46,14 @@ gulp.task('sassdoc', function () {
     }));
 });
 
+/**
+*
+* Default hologram task
+* https://github.com/rejahrehim/gulp-hologram
+*
+**/
+
+gulp.task('hologram', function() {
+        gulp.src('config.yml')
+                .pipe(hologram());
+});
