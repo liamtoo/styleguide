@@ -23,3 +23,7 @@ dependencies:
 # 'section'. To output navigation for sub-sections,
 # set the value to `all`
 nav_level: all
+
+# List all css to include for the styleguide render examples (path from styleguide directory)
+# css_include:
+#   - ./build/main.css

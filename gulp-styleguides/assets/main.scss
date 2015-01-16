@@ -3,5 +3,8 @@
 @import "tools/mixins";
 @import "tools/variables";
 
+// Style normalization
+@import "general/normalize";
+
 // Documented by Hologram
 @import "components/buttons";
