@@ -1,0 +1,47 @@
+'use strict';
+
+var gulp 			  = require('gulp'),
+	sass 			    = require('gulp-ruby-sass'),
+	autoprefixer 	= require('gulp-autoprefixer'),
+	sassdoc			  = require('gulp-sassdoc');
+
+gulp.task('default', function() {
+	return gulp.src('main.scss')
+    	.pipe(sass({
+    		style: 'expanded',
+    		precision: 1,
+        	lineNumbers : true
+    	}))
+    	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    	.pipe(gulp.dest('build/'))
+});
+
+gulp.task('watch', function() {
+	gulp.watch('**/*.scss', ['default']);
+});
+
+/**
+*
+* Default sassDoc task
+* Config options - http://sassdoc.com/gulp/
+* API - http://sassdoc.com/annotations/
+*
+**/
+
+gulp.task('sassdoc', function () {
+  return gulp
+    .src('tools')
+    .pipe(sassdoc({
+        'dest': 'sassdoc',
+        'verbose': true,
+        'groups': {
+          undefined: "undefined",
+        },
+    'display': {
+      'access': ['public', 'private'],
+      'alias': true
+    },
+        'basePath': 'https://github.com/Skoks/styleguide'
+    }));
+});
+
