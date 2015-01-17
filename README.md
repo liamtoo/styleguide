@@ -1,5 +1,0 @@
-# RSG Styleguide
-
-## Hologram
-
-
