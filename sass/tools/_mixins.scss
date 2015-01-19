@@ -1,30 +1,31 @@
-/// Mixin for coloring things
+/// Mixin for embedding `@media queries`
 ///
 /// @author Vova Skok
 ///
 /// @group mixins
 ///
-/// @param {color} $color - color
-/// @param {color} $background - background color
+/// @content Styles which go inside of chosen breakpoint
 ///
-/// @throw Mixin arguments has to be colors
+/// @throw "Invalid breakpoint `#{$name}`"
 ///
 /// @example
-/// colored(red, blue)
-/// // color: red
-/// // background-color: blue
+/// `@include breakpoint(small);`
 ///
-/// @todo
-/// Do something else
+/// @output
+/// `@media (min-width: 480px) {
+///		// Styles
+/// }`
+///
+/// @require {variable} $breakpoints
+///
 
-@mixin colored($color, $background) {
-	@if type-of($color) == 'color' and
-		type-of($background) == 'color' {
-			color: $color;
-			background-color: $background;
-	} @else {
-
-		@error Mixin arguments has to be colors;
-
-	}
+@mixin breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Invalid breakpoint `#{$name}`.";
+  }
+  @else {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
 }

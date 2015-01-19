@@ -54,8 +54,66 @@
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="colored" data-type="mixin">
-              <a href="#mixin-colored">colored
+            <li class="sidebar__item  sassdoc__item" data-name="breakpoint" data-type="mixin">
+              <a href="#mixin-breakpoint">breakpoint
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="placeholders"><a href="#placeholders">placeholders</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="placeholders-placeholder"><a href="#placeholders-placeholder">placeholders</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="clearfix" data-type="placeholder">
+              <a href="#placeholder-clearfix">clearfix
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="variables"><a href="#variables">variables</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="variables-variable"><a href="#variables-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="breakpoints" data-type="variable">
+              <a href="#variable-breakpoints">breakpoints
               
               
               </a>
@@ -121,12 +179,12 @@
 
               
               
-                <section class="main__item  item" id="mixin-colored">
+                <section class="main__item  item" id="mixin-breakpoint">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#mixin-colored">colored</a>
+  <a class="item__name" href="#mixin-breakpoint">breakpoint</a>
 
   
 
@@ -143,45 +201,24 @@
 
 
 
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin colored($color, $background) { 
-	@if type-of($color) == &#39;color&#39; and
-		type-of($background) == &#39;color&#39; {
-			color: $color;
-			background-color: $background;
-	} @else {
-
-		@error Mixin arguments has to be colors;
-
-	}
+    data-expanded="@mixin breakpoint() { 
+  @if not map-has-key($breakpoints, $name) {
+    @warn &quot;Invalid breakpoint `#{$name}`.&quot;;
+  }
+  @else {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
  }"
-    data-collapsed="@mixin colored($color, $background) { ... }"><code>@mixin colored($color, $background) { ... }</code></pre>
+    data-collapsed="@mixin breakpoint() { ... }"><code>@mixin breakpoint() { ... }</code></pre>
 
   
-    <a href="https://github.com/Skoks/styleguide/_mixins.scss#L20-L30" class="item__source-link" target="_blank">View source</a>
+    <a href="https://github.com/Skoks/styleguide/_mixins.scss#L22-L31" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -195,7 +232,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Mixin for coloring things</p>
+  <div class="item__description"><p>Mixin for embedding <code>@media queries</code></p>
 </div>
 
 
@@ -205,51 +242,7 @@
 
 
 
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
-        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$color</code></th>
-          <td data-label="desc"><p>color</p>
-</td>
-          <td data-label="type">
-          
-            Color
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <th scope="row" data-label="name"><code>$background</code></th>
-          <td data-label="desc"><p>background color</p>
-</td>
-          <td data-label="type">
-          
-            Color
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;<span class="visually-hidden"> none</span>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
+  <p>None.</p>
 
 
 
@@ -265,9 +258,7 @@
   
   <div class="item__example  example">
     
-    <pre class="example__code"><code class="language-scss">colored(red, blue)
-// color: red
-// background-color: blue</code></pre>
+    <pre class="example__code"><code class="language-scss">`@include breakpoint(small);`</code></pre>
   </div>
   
 
@@ -279,7 +270,7 @@
 
   <ul class="list-unstyled">
     
-      <li><p>Mixin arguments has to be colors</p>
+      <li><p>&quot;Invalid breakpoint <code>#{$name}</code>&quot;</p>
 </li>
     
   </ul>
@@ -290,6 +281,25 @@
     
 
 
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-breakpoints"><code>breakpoints</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
 
 
   
@@ -314,15 +324,305 @@
   
     
     
-  <h3 class="item__sub-heading">TODO's</h3>
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
 
   <ul class="list-unstyled">
     
-      <li><p>Do something else</p>
+      <li><p>Vova Skok</p>
 </li>
     
   </ul>
 
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="placeholders">placeholders</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="placeholders-placeholder">
+              <h2 class="main__heading--secondary">placeholders</h2>
+
+              
+              
+                <section class="main__item  item" id="placeholder-clearfix">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#placeholder-clearfix">clearfix</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="%clearfix { 
+	&amp;:after {
+	    content:&quot;&quot;;
+	    display:table;
+	    clear:both;
+	}
+ }"
+    data-collapsed="%clearfix { ... }"><code>%clearfix { ... }</code></pre>
+
+  
+    <a href="https://github.com/Skoks/styleguide/_placeholders.scss#L10-L16" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Clearfix hack for wrapping elements around their floated children</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">`@extend %clearfix;`</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Vova Skok</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="variables">variables</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="variables-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-breakpoints">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-breakpoints">breakpoints</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$breakpoints: (
+  small:  	480px,
+  medium: 	720px,
+  large:  	960px,
+  wide:   	1200px
+);</code></pre>
+
+  
+    <a href="https://github.com/Skoks/styleguide/_variables.scss#L10-L16" class="item__source-link" target="_blank">View source</a>
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Configuration map for <code>breakpoints</code> mixin</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Map</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-breakpoint"><code>breakpoint</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
 
   
     
