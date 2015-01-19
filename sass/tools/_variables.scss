@@ -1,0 +1,16 @@
+/// Configuration map for `breakpoints` mixin
+///
+/// @author Vova Skok
+///
+/// @group variables
+///
+/// @type map
+///
+
+
+$breakpoints: (
+  small:  	480px,
+  medium: 	720px,
+  large:  	960px,
+  wide:   	1200px
+);
