@@ -1,10 +1,11 @@
 'use strict';
 
-var 	gulp 			  = require('gulp'),
-	sass 			    = require('gulp-ruby-sass'),
-	autoprefixer 	= require('gulp-autoprefixer'),
-	sassdoc			  = require('gulp-sassdoc'),
-  	hologram      = require('gulp-hologram');
+var 	gulp 			    = require('gulp'),
+	    sass 			    = require('gulp-ruby-sass'),
+	    autoprefixer 	= require('gulp-autoprefixer'),
+	    sassdoc			  = require('gulp-sassdoc'),
+  	  hologram      = require('gulp-hologram'),
+      gulpkss       = require('gulp-kss');
 
 gulp.task('default', function() {
 	return gulp.src('sass/main.scss')
@@ -54,6 +55,22 @@ gulp.task('sassdoc', function () {
 **/
 
 gulp.task('hologram', function() {
-        gulp.src('./hologram/config.yml')
-          .pipe(hologram());
+  gulp.src('./hologram/config.yml')
+    .pipe(hologram());
+});
+
+
+/**
+*
+* Default gulp-kss task
+* https://github.com/PhilJ/gulp-kss
+*
+**/
+
+gulp.task('gulp-kss', function () {
+  gulp.src(['sass/components-kss/**/*.scss'])
+    .pipe(gulpkss({
+        overview: 'sass/components-kss/index.md'
+    }))
+    .pipe(gulp.dest('build/styleguide-kss/'));
 });
