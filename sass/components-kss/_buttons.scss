@@ -1,36 +1,36 @@
-/*doc
----
-title: Buttons
-category: Component - buttons
----
-
-`.btn` - is used to style `<a>` or `<button>`.
-
-
-
-```html_example
-
-<a href="#" class="btn">button</a>
-<a href="#" class="btn btn-primary">button</a>
-<a href="#" class="btn btn-info">button</a>
-
-```
-*/
-
 .btn {
 	display: inline-block;
-	padding: 5px;
+	margin: 5px;
+	padding: 15px 30px;
 	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
 	vertical-align: middle;
 	cursor: pointer;
-	border: 1px solid #bada55;
 	white-space: nowrap;
+	border: 1px solid #333;
+	border-radius: 15px;
+	color: #fff;
+	background-color: #999;
+
+	&:hover {
+		color: #fff;
+		background-color: #666;
+	}
 }
 
 .btn-primary {
-	background-color: blue;
+	background-color: #2175ee;
+
+	&:hover {
+		background-color: darken(#2175ee, 15%);
+	}
 }
 
 .btn-info {
-	background-color: lightblue;
+	background-color: #5be64c;
+
+	&:hover {
+		background-color: darken(#5be64c, 15%);
+	}
 }
