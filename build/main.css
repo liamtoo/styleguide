@@ -500,3 +500,43 @@ category: Component - buttons
 .btn-info:hover {
   background-color: #2dc91c;
 }
+
+/* line 1, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid #333;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #999;
+}
+/* line 16, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn:hover {
+  color: #fff;
+  background-color: #666;
+}
+
+/* line 22, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-primary {
+  background-color: #2175ee;
+}
+/* line 25, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-primary:hover {
+  background-color: #0e52b5;
+}
+
+/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-info {
+  background-color: #5be64c;
+}
+/* line 33, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-info:hover {
+  background-color: #2dc91c;
+}
