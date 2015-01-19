@@ -433,7 +433,16 @@ th {
   padding: 0;
 }
 
-/* line 9, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+/*
+General button styles.
+
+.btn - is used to style `<a>` or `<button>` and has core styles.
+.btn-primary - is `.btn`'s color variant
+.btn-info - is `.btn`'s color variant
+
+Styleguide 1
+*/
+/* line 11, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
 .btn {
   display: inline-block;
   margin: 5px;
@@ -449,26 +458,26 @@ th {
   color: #fff;
   background-color: #999;
 }
-/* line 24, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+/* line 26, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
 .btn:hover {
   color: #fff;
   background-color: #666;
 }
 
-/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+/* line 32, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
 .btn-primary {
   background-color: #2175ee;
 }
-/* line 33, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+/* line 35, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
 .btn-primary:hover {
   background-color: #0e52b5;
 }
 
-/* line 38, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+/* line 40, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
 .btn-info {
   background-color: #5be64c;
 }
-/* line 41, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+/* line 43, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
 .btn-info:hover {
   background-color: #2dc91c;
 }
