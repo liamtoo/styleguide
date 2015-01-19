@@ -451,7 +451,7 @@ category: Component - buttons
 
 ```
 */
-/* line 20, ../../../../../../../Users/Vlad/Development/styleguide/sass/components/_buttons.scss */
+/* line 20, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn {
   display: inline-block;
   padding: 5px;
@@ -462,12 +462,12 @@ category: Component - buttons
   white-space: nowrap;
 }
 
-/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components/_buttons.scss */
+/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-primary {
   background-color: blue;
 }
 
-/* line 34, ../../../../../../../Users/Vlad/Development/styleguide/sass/components/_buttons.scss */
+/* line 34, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-info {
   background-color: lightblue;
 }

@@ -1,0 +1,36 @@
+/*doc
+---
+title: Buttons
+category: Component - buttons
+---
+
+`.btn` - is used to style `<a>` or `<button>`.
+
+
+
+```html_example
+
+<a href="#" class="btn">button</a>
+<a href="#" class="btn btn-primary">button</a>
+<a href="#" class="btn btn-info">button</a>
+
+```
+*/
+
+.btn {
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #bada55;
+	white-space: nowrap;
+}
+
+.btn-primary {
+	background-color: blue;
+}
+
+.btn-info {
+	background-color: lightblue;
+}
