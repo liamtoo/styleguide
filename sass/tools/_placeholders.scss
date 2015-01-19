@@ -1,0 +1,16 @@
+/// Clearfix hack for wrapping elements around their floated children
+///
+/// @author Vova Skok
+///
+/// @group placeholders
+///
+/// @example
+/// `@extend %clearfix;`
+
+%clearfix {
+	&:after {
+	    content:"";
+	    display:table;
+	    clear:both;
+	}
+}
