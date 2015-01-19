@@ -16,6 +16,7 @@
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-hologram": "^1.2.0",
+    "gulp-kss": "0.0.2",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-sassdoc": "^1.1.1",
     "sassdoc": "^1.10.9"
