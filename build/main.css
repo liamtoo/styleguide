@@ -439,7 +439,11 @@ title: Buttons
 category: Component - buttons
 ---
 
-`.btn` - is used to style `<a>` or `<button>`.
+`.btn` - is used to style `<a>` or `<button>` and has core styles.
+
+`.btn-primary` - is `.btn`'s color variant
+
+`.btn-info` - is `.btn`'s color variant
 
 
 
@@ -449,25 +453,50 @@ category: Component - buttons
 <a href="#" class="btn btn-primary">button</a>
 <a href="#" class="btn btn-info">button</a>
 
+<br />
+
+<button href="#" class="btn">button</button>
+<button href="#" class="btn btn-primary">button</button>
+<button href="#" class="btn btn-info">button</button>
+
 ```
 */
-/* line 20, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn {
   display: inline-block;
-  padding: 5px;
+  margin: 5px;
+  padding: 15px 30px;
   text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
   vertical-align: middle;
   cursor: pointer;
-  border: 1px solid #bada55;
   white-space: nowrap;
+  border: 1px solid #333;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #999;
+}
+/* line 45, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+.btn:hover {
+  color: #fff;
+  background-color: #666;
 }
 
-/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 51, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-primary {
-  background-color: blue;
+  background-color: #2175ee;
+}
+/* line 54, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+.btn-primary:hover {
+  background-color: #0e52b5;
 }
 
-/* line 34, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 59, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-info {
-  background-color: lightblue;
+  background-color: #5be64c;
+}
+/* line 62, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+.btn-info:hover {
+  background-color: #2dc91c;
 }
