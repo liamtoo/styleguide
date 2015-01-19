@@ -439,6 +439,8 @@ title: Buttons
 category: Component - buttons
 ---
 
+General button styles.
+
 `.btn` - is used to style `<a>` or `<button>` and has core styles.
 
 `.btn-primary` - is `.btn`'s color variant
@@ -455,13 +457,13 @@ category: Component - buttons
 
 <br />
 
-<button href="#" class="btn">button</button>
-<button href="#" class="btn btn-primary">button</button>
-<button href="#" class="btn btn-info">button</button>
+<button class="btn">button</button>
+<button class="btn btn-primary">button</button>
+<button class="btn btn-info">button</button>
 
 ```
 */
-/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 32, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn {
   display: inline-block;
   margin: 5px;
@@ -477,32 +479,32 @@ category: Component - buttons
   color: #fff;
   background-color: #999;
 }
-/* line 45, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 47, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn:hover {
   color: #fff;
   background-color: #666;
 }
 
-/* line 51, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 53, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-primary {
   background-color: #2175ee;
 }
-/* line 54, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 56, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-primary:hover {
   background-color: #0e52b5;
 }
 
-/* line 59, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 61, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-info {
   background-color: #5be64c;
 }
-/* line 62, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
+/* line 64, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-info:hover {
   background-color: #2dc91c;
 }
 
-/* line 1, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-.btn {
+/* line 10, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+a.button.star {
   display: inline-block;
   margin: 5px;
   padding: 15px 30px;
@@ -517,26 +519,11 @@ category: Component - buttons
   color: #fff;
   background-color: #999;
 }
-/* line 16, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-.btn:hover {
-  color: #fff;
-  background-color: #666;
+/* line 24, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+a.button.star.star-given {
+  color: red;
 }
-
-/* line 22, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-.btn-primary {
-  background-color: #2175ee;
-}
-/* line 25, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-.btn-primary:hover {
-  background-color: #0e52b5;
-}
-
-/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-.btn-info {
-  background-color: #5be64c;
-}
-/* line 33, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-.btn-info:hover {
-  background-color: #2dc91c;
+/* line 27, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+a.button.star.disabled {
+  color: #000;
 }

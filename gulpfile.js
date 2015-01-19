@@ -8,7 +8,7 @@ var 	gulp 			    = require('gulp'),
       gulpkss       = require('gulp-kss');
 
 gulp.task('default', function() {
-	return gulp.src('sass/main.scss')
+	return gulp.src('sass/style.scss')
     		.pipe(sass({
     			style: 'expanded',
     			precision: 1,

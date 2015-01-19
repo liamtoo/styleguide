@@ -4,6 +4,8 @@ title: Buttons
 category: Component - buttons
 ---
 
+General button styles.
+
 `.btn` - is used to style `<a>` or `<button>` and has core styles.
 
 `.btn-primary` - is `.btn`'s color variant
@@ -20,9 +22,9 @@ category: Component - buttons
 
 <br />
 
-<button href="#" class="btn">button</button>
-<button href="#" class="btn btn-primary">button</button>
-<button href="#" class="btn btn-info">button</button>
+<button class="btn">button</button>
+<button class="btn btn-primary">button</button>
+<button class="btn btn-info">button</button>
 
 ```
 */
