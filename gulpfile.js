@@ -5,7 +5,8 @@ var 	gulp 			    = require('gulp'),
 	    autoprefixer 	= require('gulp-autoprefixer'),
 	    sassdoc			  = require('gulp-sassdoc'),
   	  hologram      = require('gulp-hologram'),
-      gulpkss       = require('gulp-kss');
+      concat    = require('gulp-concat'),
+      kss           = require('gulp-kss');
 
 gulp.task('default', function() {
 	return gulp.src('sass/style.scss')
@@ -67,10 +68,15 @@ gulp.task('hologram', function() {
 *
 **/
 
-gulp.task('gulp-kss', function () {
+gulp.task('kss', function () {
   gulp.src(['sass/components-kss/**/*.scss'])
-    .pipe(gulpkss({
+    .pipe(kss({
         overview: 'sass/components-kss/index.md'
     }))
     .pipe(gulp.dest('build/styleguide-kss/'));
+
+  gulp.src('sass/style.scss')
+    .pipe(sass())
+    .pipe(concat('public/style.css'))
+    .pipe(gulp.dest('build/styleguide-kss'));
 });

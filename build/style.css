@@ -433,6 +433,46 @@ th {
   padding: 0;
 }
 
+/* line 9, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid #333;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #999;
+}
+/* line 24, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn:hover {
+  color: #fff;
+  background-color: #666;
+}
+
+/* line 30, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-primary {
+  background-color: #2175ee;
+}
+/* line 33, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-primary:hover {
+  background-color: #0e52b5;
+}
+
+/* line 38, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-info {
+  background-color: #5be64c;
+}
+/* line 41, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
+.btn-info:hover {
+  background-color: #2dc91c;
+}
+
 /*doc
 ---
 title: Buttons
@@ -501,29 +541,4 @@ General button styles.
 /* line 64, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss */
 .btn-info:hover {
   background-color: #2dc91c;
-}
-
-/* line 10, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-a.button.star {
-  display: inline-block;
-  margin: 5px;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  vertical-align: middle;
-  cursor: pointer;
-  white-space: nowrap;
-  border: 1px solid #333;
-  border-radius: 15px;
-  color: #fff;
-  background-color: #999;
-}
-/* line 24, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-a.button.star.star-given {
-  color: red;
-}
-/* line 27, ../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss */
-a.button.star.disabled {
-  color: #000;
 }
