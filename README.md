@@ -6,4 +6,8 @@
 
 ## Hologram
 
-`gulp hologram` - will generate style to build/styleguide-hologram
+`gulp hologram` - will generate styleguide to build/styleguide-hologram
+
+## KSS
+
+`gulp kss` - will generate styleguide to build/styleguide-kss
