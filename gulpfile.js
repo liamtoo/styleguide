@@ -72,7 +72,8 @@ gulp.task('hologram', function() {
 gulp.task('kss', function () {
   gulp.src(['sass/components-kss/**/*.scss'])
     .pipe(kss({
-        overview: 'sass/components-kss/index.md'
+        overview: 'sass/components-kss/index.md',
+        // templateDirectory: 'kss-templates'
     }))
     .pipe(gulp.dest('build/styleguide-kss/'));
 
