@@ -9,7 +9,7 @@
 /// @throw "Invalid breakpoint `#{$name}`"
 ///
 /// @example
-/// `@include breakpoint(small);`
+///  @include breakpoint(small);
 ///
 /// @output
 /// `@media (min-width: 480px) {
