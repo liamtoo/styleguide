@@ -1,3 +1,4 @@
+@import url(components-hologram/toggle.css);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -356,107 +357,420 @@ td,
 th {
   padding: 0; }
 
-/*
-General button styles.
+/*doc
+---
+title: Badges
+name: badge
+category: Components
+---
 
-.btn - is used to style `<a>` or `<button>` and has core styles.
-.btn-primary - is `.btn`'s color variant
-.btn-info - is `.btn`'s color variant
+Badges are a way to display a small amount of text or an image within a
+nicely formatted box.
 
-Styleguide 1
 */
-.btn {
+.badgeStandard, .badgePrimary, .badgeSecondary {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 0.35714em 0.42857em 0.21429em;
   display: inline-block;
-  margin: 5px;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  vertical-align: middle;
-  cursor: pointer;
-  white-space: nowrap;
-  border: 1px solid #333;
-  border-radius: 15px;
-  color: #fff;
-  background-color: #999; }
-  .btn:hover {
-    color: #fff;
-    background-color: #666; }
+  color: white;
+  line-height: 1;
+  text-transform: uppercase; }
 
-.btn-primary {
-  background-color: #2175ee; }
-  .btn-primary:hover {
-    background-color: #0e52b5; }
+/*doc
+---
+title: Badge Colors
+parent: badge
+name: badgeSkins
+category: Components
+---
 
-.btn-info {
-  background-color: #5be64c; }
-  .btn-info:hover {
-    background-color: #2dc91c; }
+Class          | Description
+-------------- | -----------------
+badgeStandard  | This is a basic badge
+badgePrimary   | This is a badge with the trulia orange used on CTAs
+badgeSecondary | This is a badge with the alternate CTA color (Trulia green)
+badgeTertiary  | This is a badge for a warning or something negative
+
+
+```html_example
+<strong class="badgeStandard">Sold</strong>
+<strong class="badgePrimary">For Sale</strong>
+<strong class="badgeSecondary">For Rent</strong>
+```
+
+*/
+.badgeStandard {
+  background-color: #999999; }
+
+.badgePrimary {
+  background-color: #ff5c00; }
+
+.badgeSecondary {
+  background-color: #5eab1f; }
 
 /*doc
 ---
 title: Buttons
-category: Component - buttons
+name: button
+category: Base CSS
 ---
 
-General button styles.
-
-`.btn` - is used to style `<a>` or `<button>` and has core styles.
-
-`.btn-primary` - is `.btn`'s color variant
-
-`.btn-info` - is `.btn`'s color variant
-
-
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
 
 ```html_example
+<button class="btn btnDefault">Click</button>
+<a class="btn btnDefault" href="http://trulia.com">Don't click</a>
+```
 
-<a href="#" class="btn">button</a>
-<a href="#" class="btn btn-primary">button</a>
-<a href="#" class="btn btn-info">button</a>
+If your button is actually a link to another page, please use the
+`<a>` element, while if your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
 
-<br />
+##Button Sizes
+There are three 3 sizes for buttons: Large, medium (default)
+and small. Simply apply the size modifier class for the desired size.
+There is also an additional modifier that will make the button take the
+full width of the container. It may be used with the any of the button
+size and style modifiers.
 
-<button class="btn">button</button>
-<button class="btn btn-primary">button</button>
-<button class="btn btn-info">button</button>
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<a class="btn btnDefault btnLrg">Large</a>              | `btn btnDefault btnLrg`
+<a class="btn btnDefault">Default</a>                   | `btn btnDefault`
+<a class="btn btnDefault btnSml">Small</a>              | `btn btnDefault btnSml`
+<a class="btn btnDefault btnFullWidth">Full width</a>   | `btn btnDefault btnFullWidth`
 
+*/
+button {
+  background: none;
+  border: 0; }
+
+/* Base button */
+.btn {
+  padding: .5em 1em;
+  margin: 0;
+  display: inline-block;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  text-align: center;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #999; }
+
+/* Button sizes */
+.btnSml {
+  font-size: 10px;
+  font-size: 0.625rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+.btnLrg {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+.btnFullWidth {
+  width: 100%; }
+
+/*doc
+---
+parent: button
+name: buttonSkins
+title: Button Styles
+---
+
+Button                                            | Class             | Description
+------------------------------------------------- | ----------------- | -----------
+<button class="btn btnDefault">Default</button>   | `btn btnDefault`  | This is what buttons look like, this is the go to button style.
+<button class="btn btnPrimary">Primary</button>   | `btn btnPrimary`  | Use this button as the primary call to action
+<button class="btn btnDanger">Delete</button>     | `btn btnDanger`   | This button is for delete actions, these actions should also have a confirmation dialog
+<button class="btn btnDisabled">Disabled</button> | `btn btnDisabled` | I'm afraid I can't let you do that, yet.
+
+*/
+.btnDefault,
+a.btnDefault {
+  border: 1px #d7d7d7 solid;
+  background: #f3f3f3;
+  color: #222222;
+  text-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0px #cccccc;
+  -moz-box-shadow: 0 1px 0px #cccccc;
+  box-shadow: 0 1px 0px #cccccc; }
+
+.btnDefault:hover,
+.btnDefault:focus {
+  background: #f6f6f6; }
+
+.btnDefault:active {
+  position: relative;
+  top: 1px;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+.btnPrimary,
+a.btnPrimary, .btnDanger,
+a.btnDanger {
+  color: white;
+  text-shadow: 0 0 0; }
+
+.btnPrimary,
+a.btnPrimary {
+  border: 1px #d14b00 solid;
+  background: #ff5c00;
+  -webkit-box-shadow: 0 1px 0px #d35500;
+  -moz-box-shadow: 0 1px 0px #d35500;
+  box-shadow: 0 1px 0px #d35500; }
+
+.btnPrimary:hover,
+.btnPrimary:focus {
+  background: #ff660f; }
+
+.btnPrimary:active {
+  position: relative;
+  top: 1px;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+.btnDanger,
+a.btnDanger {
+  border: 1px #a21a10 solid;
+  background: #cc2114;
+  -webkit-box-shadow: 0 1px 0px #d35500;
+  -moz-box-shadow: 0 1px 0px #d35500;
+  box-shadow: 0 1px 0px #d35500; }
+
+.btnDanger:hover,
+.btnDanger:focus {
+  background: #da2315; }
+
+.btnDanger:active {
+  position: relative;
+  top: 1px;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus
+.btn[disabled]:active,
+.btnDisabled,
+a.btnDisabled,
+.btnDisabled:hover,
+.btnDisabled:focus,
+.btnDisabled:active {
+  border: 0px;
+  background: #cccccc;
+  color: #999999;
+  text-shadow: 0 0 0;
+  cursor: default; }
+
+.btn[disabled]:active,
+.btnDisabled:active {
+  position: static;
+  color: #999999;
+  box-shadow: none; }
+
+/*doc
+---
+title: Frames
+name: frame
+category: Components
+---
+
+A frame is a simple border around some content, usually an image but
+other content can be used as well. The different skin classes generally
+change the intensity and padding size of the frame.
+
+*/
+.frameThumb, .frameSmall, .frameStandard, .frameStacked {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  *border: 1px solid #e9e9e9;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2); }
+
+.frameThumb img, .frameSmall img, .frameStandard img, .frameStacked img {
+  display: block; }
+
+.frameThumb .polaroid, .frameSmall .polaroid, .frameStandard .polaroid, .frameStacked .polaroid {
+  margin-top: 5px; }
+
+/*doc
+---
+parent: frame
+title: Small Frame
+name: frameSmall
+---
+
+A small frame using the `.polaroid` class to include some text along with the image. Note the use of the inline style to set the width.
+This is one of the only places where that is acceptable...
+
+```html_example
+<div class="frameSmall">
+  <img alt="" src="http://placekitten.com/180/135">
+  <div class="polaroid" style='width:180px;'>
+    <p class="mvn">Here's a little text below the image</p>
+  </div>
+</div>
 ```
 */
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  vertical-align: middle;
-  cursor: pointer;
-  white-space: nowrap;
-  border: 1px solid #333;
-  border-radius: 15px;
-  color: #fff;
-  background-color: #999; }
-  .btn:hover {
-    color: #fff;
-    background-color: #666; }
+.frameSmall {
+  padding: 6px; }
 
-.btn-primary {
-  background-color: #2175ee; }
-  .btn-primary:hover {
-    background-color: #0e52b5; }
+/*doc
+---
+parent: frame
+title: Stacked frame with rotations
+name: frameStacked
+---
 
-.btn-info {
-  background-color: #5be64c; }
-  .btn-info:hover {
-    background-color: #2dc91c; }
+```html_example
+<div class="frameStacked">
+  <img alt="" src="http://placekitten.com/480/640">
+</div>
+```
+*/
+.frameStacked {
+  padding: 8px;
+  position: relative;
+  background-color: #fff; }
+
+.frameStacked:before, .frameStacked:after {
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -999;
+  content: "";
+  background-color: #f9f9f9; }
+
+.frameStacked:before {
+  left: 5px;
+  top: 0px;
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  transform: rotate(1deg); }
+
+.frameStacked:after {
+  right: 5px;
+  top: 0px;
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  transform: rotate(-1deg); }
+
+/*doc
+---
+parent: frame
+title: Standard Frame
+name: frameStandard
+---
+
+```html_example
+<div class="frameStandard">
+  <img alt="" src="http://placekitten.com/480/640">
+</div>
+```
+*/
+.frameStandard {
+  padding: 8px; }
+
+/*doc
+---
+parent: frame
+title: Thumbnail Frame
+name: frameThumb
+---
+
+```html_example
+<div class="frameThumb">
+  <img alt="" src="http://placekitten.com/120/120">
+</div>
+```
+*/
+.frameThumb {
+  padding: 2px; }
+
+/*doc
+---
+title: Typography
+name: typography
+category: Base CSS
+---
+
+These are the heading sizes that you can use site wide.
+
+```html_example_table
+<h1>h1 36px</h1>
+
+<h2>h2 25px</h2>
+
+<h3>h3 20px</h3>
+
+<h4>h4 18px</h4>
+
+<h5>h5 16px</h5>
+
+<p>This is an example of our base font style 16px. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+```
+
+*/
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 25px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 16px; }
 
 /*# sourceMappingURL=style.css.map */
 
 {
 "version": 3,
-"mappings": "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",
-"sources": ["../../../../../../../Users/Vlad/Development/styleguide/sass/general/_normalize.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-kss/_buttons.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss"],
+"mappings": "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",
+"sources": ["../style.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/general/_normalize.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_badge.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_badgeSkins.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttons.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_buttonSkins.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_frames.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_frameSmall.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_frameStacked.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_frameStandard.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_frameThumb.scss","../../../../../../../Users/Vlad/Development/styleguide/sass/components-hologram/_typography.scss"],
 "names": [],
 "file": "style.css"
 }

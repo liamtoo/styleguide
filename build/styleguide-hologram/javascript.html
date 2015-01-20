@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>Javascript</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.css">
@@ -48,7 +48,7 @@
       <nav class="cortana-nav">
         <ul>
           
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
           
         </ul>
         
@@ -94,7 +94,7 @@
             
               
               
-                <li><a href="javascript.html">Javascript</a></li>
+                <li><a class="active" href="javascript.html">Javascript</a></li>
               
             
           
@@ -105,7 +105,7 @@
 
     <header class="cortana-header sb-slide">
       
-        <h1>Styleguide home</h1>
+        <h1>Javascript</h1>
       
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
@@ -124,6 +124,10 @@
         <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
           <ul bs-scrollspy-list data-offset="-30">
             
+              
+                <li><a href="#toggle">Toggle</a></li>
+              
+            
           </ul>
         </nav>
 
@@ -132,15 +136,53 @@
 
 
 
-<h1>Hello World</h1>
+<h1 id="toggle">Toggle</h1>
 
-<h2>This is Hologram styleguide</h2>
+<p>Toggles should be used display show/hide comment. For example, showing/hiding a additional information on the search results page.
+You can set the default as either active or inactive by specifying the class on the span to be either <code>toggleActive</code> or <code>toggleInactive</code>,
+and setting (or not setting) the class <code>hideVisually</code> on the container that you are toggling.</p>
 
-<p>This page is used for providing general information about project. </p>
+<p>Here&#39;s how you kick this off:</p>
+</div><div class="codeExample"><div class="exampleOutput"><a href="#toggleArrow1" class="toggle toggleArrow " data-toggle-text="Fewer Options">More Options</a>
+<div id="toggleArrow1" class="hideVisually">Yo, I got some content to show you. Lorem ipsum occaecat eiusmod Ut et sit sint quis qui labore in exercitation
+  esse. Lorem ipsum in aliquip esse anim aliquip ullamco sit dolor in deserunt eu labore. Lorem ipsum magna
+  officia in laborum fugiat proident cupidatat in ex aliquip velit officia nulla aliquip ut. Lorem ipsum
+  nostrud ad Ut nulla velit qui esse tempor Excepteur consectetur pariatur enim.
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#toggleArrow1"</span> <span class="na">class=</span><span class="s">"toggle toggleArrow "</span> <span class="na">data-toggle-text=</span><span class="s">"Fewer Options"</span><span class="nt">&gt;</span>More Options<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"toggleArrow1"</span> <span class="na">class=</span><span class="s">"hideVisually"</span><span class="nt">&gt;</span>Yo, I got some content to show you. Lorem ipsum occaecat eiusmod Ut et sit sint quis qui labore in exercitation
+  esse. Lorem ipsum in aliquip esse anim aliquip ullamco sit dolor in deserunt eu labore. Lorem ipsum magna
+  officia in laborum fugiat proident cupidatat in ex aliquip velit officia nulla aliquip ut. Lorem ipsum
+  nostrud ad Ut nulla velit qui esse tempor Excepteur consectetur pariatur enim.
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content"></div><script>$(document).ready(function () {
+  $('.toggle').truliaToggle();
+});
+</script> <div class="codeBlock jsExample"><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.toggle'</span><span class="p">).</span><span class="nx">truliaToggle</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div></div><div class="cortana-content">
+<p>Below are some methods you can also call on the toggle component and events you can listen to:</p>
 
-<h3>Mentalhelp.net styleguide</h3>
-
-<p>was generated from components/index.md</p>
+<table><thead>
+<tr>
+<th>method</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>toggle</code></td>
+<td>Toggle the tooltip. Optional boolean argument to force active. Example: <code>$(&#39;.toggle&#39;).truliaToggle(&#39;toggle&#39;, true)</code></td>
+</tr>
+<tr>
+<td><strong>events</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><code>toggle</code></td>
+<td>Listen to this event to perform an action when the toggle has changed state <code>$(&#39;.toggle&#39;).on(&#39;toggle&#39;, function (e, active) { if (active) console.log(&#39;I\m Active!&#39;) })</code></td>
+</tr>
+</tbody></table>
 
         </div>
       </div>

@@ -7,9 +7,19 @@
 // Style normalization
 @import "general/normalize";
 
-// Documented by KSS
-@import "components-kss/buttons";
-
 // Documented by Hologram
+@import "components-hologram/badge";
+@import "components-hologram/badgeSkins";
 @import "components-hologram/buttons";
+@import "components-hologram/buttonSkins";
+@import "components-hologram/frames";
+@import "components-hologram/frameSmall";
+@import "components-hologram/frameStacked";
+@import "components-hologram/frameStandard";
+@import "components-hologram/frameThumb";
+@import "components-hologram/toggle.css";
+@import "components-hologram/typography";
 
+
+// // Documented by KSS
+// @import "components-kss/buttons";
