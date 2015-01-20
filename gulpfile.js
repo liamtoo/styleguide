@@ -2,20 +2,21 @@
 
 var 	gulp 			    = require('gulp'),
 	    sass 			    = require('gulp-ruby-sass'),
-	    autoprefixer 	= require('gulp-autoprefixer'),
+	    // autoprefixer 	= require('gulp-autoprefixer'),
 	    sassdoc			  = require('gulp-sassdoc'),
   	  hologram      = require('gulp-hologram'),
-      concat    = require('gulp-concat'),
+      concat        = require('gulp-concat'),
       kss           = require('gulp-kss');
 
 gulp.task('default', function() {
 	return gulp.src('sass/style.scss')
     		.pipe(sass({
     			style: 'expanded',
+          sourcemap: false,
     			precision: 1,
-        		lineNumbers : true
+        	lineNumbers : true
     	}))
-    	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    	// .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     	.pipe(gulp.dest('build/'))
 });
 
